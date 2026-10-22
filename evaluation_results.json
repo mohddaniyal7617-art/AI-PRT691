@@ -1,0 +1,104 @@
+{
+  "n_invoices": 368,
+  "n_vehicles": 313,
+  "vehicles_with_pairs": 34,
+  "n_training_pairs": 48,
+  "observation_window": [
+    "2026-04-09",
+    "2026-08-28"
+  ],
+  "gap_days_median": 29.5,
+  "gap_days_max": 122,
+  "share_gaps_14d_or_less": 0.31,
+  "rf_in_sample_mae_days_DO_NOT_REPORT": 8.45,
+  "regression_lovo": {
+    "Global mean interval (baseline)": {
+      "lovo_mae_days": 20.32,
+      "ci95": [
+        16.2,
+        25.7
+      ]
+    },
+    "Global median interval (baseline)": {
+      "lovo_mae_days": 20.9,
+      "ci95": [
+        16.9,
+        26.5
+      ]
+    },
+    "Median interval by client type (baseline)": {
+      "lovo_mae_days": 20.23,
+      "ci95": [
+        16.4,
+        25.6
+      ]
+    },
+    "Random forest (original config)": {
+      "lovo_mae_days": 23.49,
+      "ci95": [
+        18.6,
+        30.0
+      ]
+    },
+    "Random forest (regularised, min_leaf=5)": {
+      "lovo_mae_days": 21.2,
+      "ci95": [
+        16.5,
+        27.3
+      ]
+    },
+    "Ridge regression": {
+      "lovo_mae_days": 22.18,
+      "ci95": [
+        17.3,
+        29.0
+      ]
+    }
+  },
+  "subsystem_classifiers_lovo": {
+    "brakes": {
+      "positives": 13,
+      "n": 48,
+      "rf_precision_recall_f1": [
+        0.21,
+        0.23,
+        0.22
+      ],
+      "always_positive_f1": 0.43,
+      "persistence_f1": 0.29
+    },
+    "cooling": {
+      "positives": 8,
+      "n": 48,
+      "rf_precision_recall_f1": [
+        0.5,
+        0.25,
+        0.33
+      ],
+      "always_positive_f1": 0.29,
+      "persistence_f1": 0.62
+    },
+    "drivetrain": {
+      "positives": 4,
+      "n": 48,
+      "rf_precision_recall_f1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "always_positive_f1": 0.15,
+      "persistence_f1": 0.22
+    },
+    "electrical": {
+      "positives": 11,
+      "n": 48,
+      "rf_precision_recall_f1": [
+        0.38,
+        0.27,
+        0.32
+      ],
+      "always_positive_f1": 0.37,
+      "persistence_f1": 0.38
+    }
+  }
+}
